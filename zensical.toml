@@ -1,11 +1,15 @@
 [project]
-site_name = "PearWorld_Hub"
-site_description = "Plog"
+site_description = "Blog"
 site_author = "<pearworld>"
+site_name = "PearWorld_Hub"
 site_url = "https://PearWorld.github.io/PearWorld_Hub/"
+repo_url = "https://github.com/PearWorld/PearWorld_Hub"
+repo_name = "PearWorld/PearWorld_Hub"
 nav = [
- { "主页" = "主页.md" },
+ { "主页" = "index.md" },
  { "开源项目" = "开源项目.md" },
+ { "专业课程、考研经历分享" = "专业课程、考研经历分享.md" },
+ { "苏州美食、骑行、徒步路线" = "苏州美食、骑行、徒步路线.md" },
  ]
 extra_css = ["stylesheets/extra.css"]
 extra_javascript = ["javascripts/extra.js"]
@@ -151,12 +155,12 @@ features = [
     # When tabs are enabled, top-level sections are rendered in a menu layer
     # below the header for viewports above 1220px, but remain as-is on mobile.
     # https://zensical.org/docs/setup/navigation/#navigation-tabs
-    #"navigation.tabs",
+    "navigation.tabs",
 
     # When sticky tabs are enabled, navigation tabs will lock below the header
     # and always remain visible when scrolling down.
     # https://zensical.org/docs/setup/navigation/#sticky-navigation-tabs
-    #"navigation.tabs.sticky",
+    "navigation.tabs.sticky",
 
     # A back-to-top button can be shown when the user, after scrolling down,
     # starts to scroll up again.
@@ -182,7 +186,7 @@ features = [
     # When navigation integration for the table of contents is enabled, it is
     # always rendered as part of the navigation sidebar on the left.
     # https://zensical.org/docs/setup/navigation/#navigation-integration
-    #"toc.integrate",
+    "toc.integrate",
 ]
 
 # ----------------------------------------------------------------------------
@@ -210,9 +214,9 @@ toggle.name = "Switch to light mode"
 # of suitably licensed fonts. There are options for a normal text font and for
 # a monospaced font used in code blocks.
 # ----------------------------------------------------------------------------
-#[project.theme.font]
-#text = "Inter"
-#code = "Jetbrains Mono"
+[project.theme.font]
+text = "Inter"
+code = "Jetbrains Mono"
 
 # ----------------------------------------------------------------------------
 # You can configure your own logo to be shown in the header using the "logo"
@@ -236,8 +240,33 @@ toggle.name = "Switch to light mode"
 # ----------------------------------------------------------------------------
 # The "extra" section contains miscellaneous settings.
 # ----------------------------------------------------------------------------
-#[[project.extra.social]]
-#icon = "fontawesome/brands/github"
-#link = "https://github.com/user/repo"
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/PearWorld"
+name="My GitHub"
+[[project.extra.social]] 
+icon = "fontawesome/solid/envelope" 
+link = "pearworld1235@gmail.com" 
+name = "Email Me"
+[markdown]
+extensions = [
+    "admonition",
+    "attr_list",
+    "md_in_html",
+    "pymdownx.details",
+    "pymdownx.superfences",
+    "pymdownx.tabbed",
+    "pymdownx.arithmatex",
+    "pymdownx.emoji",
+    "pymdownx.blocks.caption",
+    "pymdownx.blocks",
+]
 
+# 注意这里：尝试改用 plural (extensions) 或者确认层级
+# 如果之前的不行，试试直接用 HTML 方式（见下一步），但先试试修正这个 Header
+[markdown.extension.pymdownx.blocks]
+blocks = ["grid", "admonition", "details", "html", "tab"]
 
+[markdown.extension.pymdownx.emoji]
+emoji_index = "!!python/name:materialx.emoji.twemoji"
+emoji_generator = "!!python/name:materialx.emoji.to_svg"
