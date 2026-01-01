@@ -246,7 +246,7 @@ link = "https://github.com/PearWorld"
 name="My GitHub"
 [[project.extra.social]] 
 icon = "fontawesome/solid/envelope" 
-link = "pearworld1235@gmail.com" 
+link = "mailto:pearworld1235@gmail.com" 
 name = "Email Me"
 [markdown]
 extensions = [

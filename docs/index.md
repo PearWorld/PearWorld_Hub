@@ -12,8 +12,8 @@ hide:
 <div class="grid cards">
 <div class="card">
     <div align="center">
-      <div style="font-size: 60px; margin-bottom: 10px;">🧔🏻</div>
-      
+      <img src="images/avatar.jpg" style="border-radius: 50%; width: 100px; height: 100px; object-fit: cover; margin-bottom: 10px; border: 3px solid #eee;">
+
       <h3>PearWorld</h3>
       <p style="color: #666;">
         📍 Suzhou, China<br>
