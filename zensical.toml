@@ -2,7 +2,7 @@
 site_description = "Blog"
 site_author = "<pearworld>"
 site_name = "PearWorld_Hub"
-site_url = "https://PearWorld.github.io/PearWorld_Hub/"
+site_url = "https://www.pearworld.online"
 repo_url = "https://github.com/PearWorld/PearWorld_Hub"
 repo_name = "PearWorld/PearWorld_Hub"
 nav = [
