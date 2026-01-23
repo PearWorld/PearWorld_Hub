@@ -1,0 +1,214 @@
+/* ==========================================================================
+   PearWorld Hub - 核心样式表 (层级修复 & 全注释版)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. 全局导航栏修复 (关键修复)
+   -------------------------------------------------------------------------- */
+/* 强制提升顶部菜单栏的层级，确保它永远压在主页内容之上 */
+.md-header {
+    z-index: 1000 !important; /* 设置为 1000，确保比任何内容都高 */
+    position: sticky; /* 保持吸顶效果 */
+}
+
+/* --------------------------------------------------------------------------
+   1. Hero 区域 (主页上半部分容器)
+   -------------------------------------------------------------------------- */
+.hero-container {
+    /* 布局模式：弹性布局，让文字和头像并排 */
+    display: flex;
+    align-items: center;     /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    
+    /* 左右内容之间的间距 */
+    gap: 80px; 
+
+    /* 🔥【位置调整】顶部距离 🔥 */
+    /* 之前文字被挡住是因为这里不够大。如果觉得高了，可以把 220 改成 180 */
+    padding-top: 220px; 
+    padding-bottom: 100px;
+    
+    /* 容器最大宽度，防止在大屏幕上内容分太开 */
+    max-width: 1200px;
+    /* 居中显示 */
+    margin: 0 auto;
+    
+    /* 🔥【层级修复核心】 🔥 */
+    /* 设为 1，确保它比背景粒子(0)高，但比导航栏(1000)低 */
+    /* 这样滚动时，文字就会乖乖钻到导航栏下面去 */
+    position: relative;
+    z-index: 1; 
+}
+
+/* --------------------------------------------------------------------------
+   2. 左侧内容区 (文字部分)
+   -------------------------------------------------------------------------- */
+.hero-content {
+    display: flex;
+    flex-direction: column; /* 内容垂直排列 */
+    justify-content: center;
+    align-items: flex-start; /* 左对齐 */
+    flex: 1; /* 占据剩余空间 */
+}
+
+/* --------------------------------------------------------------------------
+   3. 右侧头像区 (图片部分)
+   -------------------------------------------------------------------------- */
+.hero-avatar img {
+    width: 280px;  /* 头像宽度 */
+    height: 280px; /* 头像高度 */
+    border-radius: 50%; /* 50% 就是正圆形 */
+    
+    /* 白色边框装饰 */
+    border: 6px solid #fff; 
+    
+    /* 阴影效果：让头像看起来是浮起来的 */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15); 
+    
+    /* 填充模式：cover 保证图片不拉伸变形 */
+    object-fit: cover; 
+    
+    /* 动画过渡时间 */
+    transition: transform 0.3s ease; 
+}
+
+/* 鼠标悬停在头像上时的特效 */
+.hero-avatar img:hover {
+    /* 放大 1.05 倍，并且顺时针旋转 3 度 */
+    transform: scale(1.05) rotate(3deg); 
+}
+
+/* --------------------------------------------------------------------------
+   4. 打字机特效 (大标题)
+   -------------------------------------------------------------------------- */
+.typing-wrapper {
+    display: inline-block;
+    margin-bottom: 20px; /* 标题和下面介绍文字的距离 */
+}
+
+.typing-text {
+    /* 字体：必须用等宽字体，不然光标会乱跳 */
+    font-family: 'JetBrains Mono', Consolas, monospace; 
+    
+    /* 🔥【字号设置】🔥 */
+    /* 这里控制标题多大。5rem 已经很大了，想更大改成 6rem 或 7rem */
+    font-size: 3rem !important; 
+
+    /* 🔥【粗细设置】🔥 */
+    /* 最大只能写 900。如果不够粗也没办法了，这是 CSS 极限 */
+    font-weight: 900; 
+    
+    color: #2e3440; /* 字体颜色：深灰 */
+    margin: 0;
+    
+    /* 行高：字号越大，行高要越小(1.0~1.2)，不然上下空白会很大 */
+    line-height: 1.1; 
+    
+    /* --- 动画核心 (不懂原理不要动下面这几行) --- */
+    overflow: hidden; /* 藏住没打出来的字 */
+    border-right: 0.15em solid #ebcb8b; /* 光标颜色(黄色) */
+    white-space: nowrap; /* 强制不换行 */
+    width: 0; /* 初始宽度为0 */
+    
+    /* steps(30): 分30步打完。如果字数变多了，要把 30 改大 */
+    /* 3s: 打字过程持续 3 秒 */
+    animation: 
+        typing 3s steps(30, end) forwards, 
+        blink 0.8s step-end infinite;
+}
+
+/* 打字动画关键帧 */
+@keyframes typing { from { width: 0 } to { width: 100% } }
+/* 光标闪烁关键帧 */
+@keyframes blink { from, to { border-color: transparent } 50% { border-color: #ebcb8b } }
+
+/* --------------------------------------------------------------------------
+   5. 自我介绍文字 (小字部分)
+   -------------------------------------------------------------------------- */
+.hero-description {
+    /* 字体：改用系统默认无衬线字体，中文显示更清晰 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    
+    /* 字号：正文大小 */
+    font-size: 1.1rem;   
+    line-height: 1.8;    /* 行距宽松一点好读 */
+    color: #4c566a;      /* 颜色比标题浅一点 */
+    
+    max-width: 600px;    /* 限制每行字数，太长了很难读 */
+    margin-bottom: 35px; /* 距离下方按钮的距离 */
+    text-align: left;    /* 左对齐 */
+    font-weight: 400;    /* 正常粗细 */
+}
+
+/* 加粗文字的颜色 (比如 STM32) */
+.hero-description strong {
+    color: #5e81ac; /* 科技蓝高亮 */
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   6. 社交按钮 (Email / CSDN)
+   -------------------------------------------------------------------------- */
+.social-actions {
+    display: flex;
+    gap: 20px; /* 两个按钮之间的距离 */
+}
+
+.social-actions .md-button {
+    font-size: 1rem; 
+    padding: 10px 24px; /* 按钮大小 */
+    border-radius: 50px; /* 圆角胶囊形状 */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* 图标和文字的距离 */
+}
+
+/* --------------------------------------------------------------------------
+   7. 粒子背景容器
+   -------------------------------------------------------------------------- */
+#particles-js {
+    position: fixed; /* 固定定位 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* 层级为 0，最底层 */
+    background: transparent;
+    pointer-events: none; /* 让鼠标穿透，否则点不动页面 */
+}
+
+/* --------------------------------------------------------------------------
+   8. 手机端适配 (屏幕宽度小于 960px 时生效)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 960px) {
+    .hero-container {
+        flex-direction: column-reverse; /* 手机上头像放上面，文字放下面 */
+        height: auto;
+        
+        /* 手机上不需要那么多留白 */
+        padding-top: 100px; 
+        padding-bottom: 40px;
+        
+        gap: 30px;
+        text-align: center; /* 强制居中 */
+    }
+    
+    .hero-content { 
+        align-items: center; /* 内容居中 */
+    }
+    
+    /* 手机上必须把打字机字号改小，否则撑破屏幕 */
+    .typing-text {
+        font-size: 2.8rem !important; 
+        white-space: normal; /* 允许换行 */
+        border-right: none;  /* 去掉光标 */
+        animation: none;     /* 关掉动画，直接显示文字 */
+        width: auto;
+    }
+
+    .hero-description {
+        text-align: center;
+        padding: 0 10px; /* 左右留点边距 */
+    }
+}

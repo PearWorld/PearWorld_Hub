@@ -6,26 +6,24 @@ site_url = "https://www.pearworld.online"
 repo_url = "https://github.com/PearWorld/PearWorld_Hub"
 repo_name = "PearWorld/PearWorld_Hub"
 nav = [
- { "主页" = "index.md" },
- { "核心项目" = "开源项目.md" },
- { "考研笔记" = "专业课程、考研经历分享.md" },
- { "生活&骑行" = "苏州美食、骑行、徒步路线.md" },
- ]
+    { "🏠 Home" = "index.md" },
+    { "🛠️ Workbench" = [
+        { "概览" = "Workbench/index.md" },
+        { "bmi088" = "Workbench/bmi088.md" },
+        { "24电赛H题" = "Workbench/24h.md" }
+    ]},
+    { "📚 Library" = "Library.md" },
+    { "🏃 Sports" = "Sports.md" },
+    { "🌲 Outdoors" = "Outdoors.md" },
+]
 extra_css = ["stylesheets/extra.css"]
 extra_javascript = ["javascripts/extra.js"]
 copyright = """Copyright &copy; 2025 pearworld"""
 [project.theme]
 variant = "modern"
-# Zensical allows you to override specific blocks, partials, or whole
-# templates as well as to define your own templates. To do this, uncomment
-# the custom_dir setting below and set it to a directory in which you
-# keep your template overrides.
-#
-# Read more:
-# - https://zensical.org/docs/customization/#extending-the-theme
-#
+logo = "images/logo.png"
 custom_dir = "overrides"
-
+favicon = "images/logo.png"
 # With the "favicon" option you can set your own image to use as the icon
 # browsers will use in the browser title bar or tab bar. The path provided
 # must be relative to the "docs_dir".
@@ -248,25 +246,20 @@ name="My GitHub"
 icon = "fontawesome/solid/envelope" 
 link = "mailto:pearworld1235@gmail.com" 
 name = "Email Me"
-[markdown]
-extensions = [
-    "admonition",
-    "attr_list",
-    "md_in_html",
-    "pymdownx.details",
-    "pymdownx.superfences",
-    "pymdownx.tabbed",
-    "pymdownx.arithmatex",
-    "pymdownx.emoji",
-    "pymdownx.blocks.caption",
-    "pymdownx.blocks",
-]
+# ==========================================
+# Markdown 扩展配置 (Based on Official Docs)
+# ==========================================
+[project.markdown_extensions]
+# 开启 HTML 属性支持 (必须)
+attr_list = {}
+# 允许在 HTML 标签中写 Markdown (必须，为了 Grid)
+md_in_html = {}
+# 开启警告框 (Admonitions)
+admonition = {}
 
-# 注意这里：尝试改用 plural (extensions) 或者确认层级
-# 如果之前的不行，试试直接用 HTML 方式（见下一步），但先试试修正这个 Header
-[markdown.extension.pymdownx.blocks]
-blocks = ["grid", "admonition", "details", "html", "tab"]
-
-[markdown.extension.pymdownx.emoji]
-emoji_index = "!!python/name:materialx.emoji.twemoji"
-emoji_generator = "!!python/name:materialx.emoji.to_svg"
+# 开启 pymdownx 系列扩展
+[project.markdown_extensions.pymdownx]
+details = {}
+superfences = {}
+tabbed = {}
+emoji = { emoji_index = "materialx.emoji.twemoji", emoji_generator = "materialx.emoji.to_svg" }
