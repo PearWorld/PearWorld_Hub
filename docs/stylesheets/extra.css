@@ -286,7 +286,7 @@
 /* 📱 手机端适配：稍微小一点，避免遮挡内容 */
 @media screen and (max-width: 768px) {
     #review-btn {
-        top: 20px;
+        top: 40px;
         right: 15px;
         padding: 10px 15px;
         font-size: 12px;
