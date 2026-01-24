@@ -10,7 +10,6 @@ hide:
 <div class="hero-container">
 
     <div class="hero-content">
-        
         <div class="typing-wrapper">
             <h1 class="typing-text">Hi, I'm PearWorld.👋</h1>
         </div>
@@ -18,7 +17,7 @@ hide:
         <p class="hero-description">
             一名<strong>机械电子工程</strong>专业的本科生，正在不断进步。
             <br>
-            这里不仅有 <strong>单片机</strong> 与 <strong>机器人</strong>的底层控制实录，更汇集了考研备考期间沉淀的核心考点。
+            这里不仅有 <strong>嵌入式</strong> 与 <strong>机器人</strong>的底层控制实录，更汇集了考研备考期间沉淀的核心考点。
         </p>
     
         <div class="social-actions">

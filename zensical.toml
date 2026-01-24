@@ -9,15 +9,26 @@ nav = [
     { "🏠 Home" = "index.md" },
     { "🛠️ Workbench" = [
         { "概览" = "Workbench/index.md" },
-        { "bmi088" = "Workbench/bmi088.md" },
-        { "24电赛H题" = "Workbench/24h.md" }
+        { "Ⓜ️bmi088" = "Workbench/bmi088.md" },
+        { "🚗24电赛H题" = "Workbench/24h.md" }
     ]},
-    { "📚 Library" = "Library.md" },
+    { "📚 Library" = [
+        { "概览" = "Library/index.md" },
+        { "⚙️机械原理" = "Library/机械原理.md" },
+        { "👨‍🔧电工学" = "Library/电工学.md" },
+        { "🔢高数上" = "Library/高数上.md" },
+        { "📚高数下" = "Library/高数下.md" },
+        { "🎟️概率论与数理统计" = "Library/概率论.md" },
+        { "🗒️线性代数" = "Library/线代.md" }
+    ]},
     { "🏃 Sports" = "Sports.md" },
     { "🌲 Outdoors" = "Outdoors.md" },
 ]
 extra_css = ["stylesheets/extra.css"]
-extra_javascript = ["javascripts/extra.js"]
+extra_javascript = [
+    "javascripts/mathjax.js", # 这是刚才新建的配置
+    "javascripts/toggle_mode.js",
+    "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"]
 copyright = """Copyright &copy; 2025 pearworld"""
 [project.theme]
 variant = "modern"
@@ -138,7 +149,7 @@ features = [
     # When navigation paths are activated, a breadcrumb navigation is rendered
     # above the title of each page
     # https://zensical.org/docs/setup/navigation/#navigation-path
-    "navigation.path",
+    # "navigation.path",
 
     # When pruning is enabled, only the visible navigation items are included
     # in the rendered HTML, reducing the size of the built site by 33% or more.
@@ -262,4 +273,5 @@ admonition = {}
 details = {}
 superfences = {}
 tabbed = {}
+arithmatex = { generic = true }
 emoji = { emoji_index = "materialx.emoji.twemoji", emoji_generator = "materialx.emoji.to_svg" }
