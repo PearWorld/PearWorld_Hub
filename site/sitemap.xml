@@ -16,10 +16,19 @@
         <loc>https://www.pearworld.online/Library/</loc>
       </url>
       <url>
-        <loc>https://www.pearworld.online/Library/%E6%9C%BA%E6%A2%B0%E5%8E%9F%E7%90%86/</loc>
+        <loc>https://www.pearworld.online/Library/mechanical%20principle/common%20blanks/</loc>
       </url>
       <url>
-        <loc>https://www.pearworld.online/Library/%E7%94%B5%E5%B7%A5%E5%AD%A6/</loc>
+        <loc>https://www.pearworld.online/Library/mechanical%20principle/common%20selection/</loc>
+      </url>
+      <url>
+        <loc>https://www.pearworld.online/Library/electric%20study/up%20end(a)/</loc>
+      </url>
+      <url>
+        <loc>https://www.pearworld.online/Library/electric%20study/up%20middle/</loc>
+      </url>
+      <url>
+        <loc>https://www.pearworld.online/Library/electric%20study/down%20end/</loc>
       </url>
       <url>
         <loc>https://www.pearworld.online/Library/%E9%AB%98%E6%95%B0%E4%B8%8A/</loc>
@@ -32,5 +41,11 @@
       </url>
       <url>
         <loc>https://www.pearworld.online/Library/%E7%BA%BF%E4%BB%A3/</loc>
+      </url>
+      <url>
+        <loc>https://www.pearworld.online/Sports/</loc>
+      </url>
+      <url>
+        <loc>https://www.pearworld.online/Outdoors/</loc>
       </url>
 </urlset>

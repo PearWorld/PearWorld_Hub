@@ -14,15 +14,22 @@ nav = [
     ]},
     { "📚 Library" = [
         { "概览" = "Library/index.md" },
-        { "⚙️机械原理" = "Library/机械原理.md" },
-        { "👨‍🔧电工学" = "Library/电工学.md" },
+        { "⚙️机械原理" = [
+            {"填空题精练"="Library/mechanical principle/common blanks.md"},
+            {"选择题精练"="Library/mechanical principle/common selection.md"}
+        ] },
+        { "👨‍🔧电工学" = [
+            {"电工上试题A"="Library/electric study/up end(a).md"},
+            {"电工上期中试题"="Library/electric study/up middle.md"},
+            {"电工下试题B"="Library/electric study/down end.md"}
+        ] },
         { "🔢高数上" = "Library/高数上.md" },
         { "📚高数下" = "Library/高数下.md" },
         { "🎟️概率论与数理统计" = "Library/概率论.md" },
         { "🗒️线性代数" = "Library/线代.md" }
     ]},
-    { "🏃 Sports" = "Sports.md" },
-    { "🌲 Outdoors" = "Outdoors.md" },
+    { "🏃 Sports" = "Sports/index.md" },
+    { "🌲 Outdoors" = "Outdoors/index.md" },
 ]
 extra_css = ["stylesheets/extra.css"]
 extra_javascript = [
@@ -35,176 +42,148 @@ variant = "modern"
 logo = "images/logo.png"
 custom_dir = "overrides"
 favicon = "images/logo.png"
-# With the "favicon" option you can set your own image to use as the icon
-# browsers will use in the browser title bar or tab bar. The path provided
-# must be relative to the "docs_dir".
+# 使用 "favicon" 选项，您可以设置自己的图片作为浏览器标题栏或标签页栏中使用的图标。
+# 提供的路径必须是相对于 "docs_dir" 的相对路径。
 #
-# Read more:
+# 了解更多:
 # - https://zensical.org/docs/setup/logo-and-icons/#favicon
 # - https://developer.mozilla.org/en-US/docs/Glossary/Favicon
 #
 #favicon = "images/favicon.png"
 
-# Zensical supports more than 60 different languages. This means that the
-# labels and tooltips that Zensical's templates produce are translated.
-# The "language" option allows you to set the language used. This language
-# is also indicated in the HTML head element to help with accessibility
-# and guide search engines and translation tools.
+# Zensical 支持超过 60 种不同的语言。这意味着 Zensical 模板生成的标签和提示工具
+# 会被翻译。"language" 选项允许您设置使用的语言。该语言也会在 HTML head 元素中
+# 注明，以帮助无障碍访问以及引导搜索引擎和翻译工具。
 #
-# The default language is "en" (English). It is possible to create
-# sites with multiple languages and configure a language selector. See
-# the documentation for details.
+# 默认语言是 "en" (英语)。可以创建多语言站点并配置语言选择器。
+# 详见文档。
 #
-# Read more:
+# 了解更多:
 # - https://zensical.org/docs/setup/language/
 #
 language = "en"
 
-# Zensical provides a number of feature toggles that change the behavior
-# of the documentation site.
+# Zensical 提供了许多功能开关，可以改变文档站点的行为。
 features = [
-    # Zensical includes an announcement bar. This feature allows users to
-    # dismiss it then they have read the announcement.
+    # Zensical 包含一个公告栏。此功能允许用户在阅读公告后将其关闭（不再显示）。
     # https://zensical.org/docs/setup/header/#announcement-bar
     "announce.dismiss",
 
-    # If you have a repository configured and turn on this feature, Zensical
-    # will generate an edit button for the page. This works for common
-    # repository hosting services.
+    # 如果您配置了代码仓库并开启此功能，Zensical 将为页面生成一个编辑按钮。
+    # 这适用于常见的仓库托管服务。
     # https://zensical.org/docs/setup/repository/#code-actions
     #"content.action.edit",
 
-    # If you have a repository configured and turn on this feature, Zensical
-    # will generate a button that allows the user to view the Markdown
-    # code for the current page.
+    # 如果您配置了代码仓库并开启此功能，Zensical 将生成一个按钮，
+    # 允许用户查看当前页面的 Markdown 源码。
     # https://zensical.org/docs/setup/repository/#code-actions
     #"content.action.view",
 
-    # Code annotations allow you to add an icon with a tooltip to your
-    # code blocks to provide explanations at crucial points.
+    # 代码注解允许您在代码块中添加带提示工具的图标，以便在关键位置提供解释。
     # https://zensical.org/docs/authoring/code-blocks/#code-annotations
     "content.code.annotate",
 
-    # This feature turns on a button in code blocks that allow users to
-    # copy the content to their clipboard without first selecting it.
+    # 此功能在代码块中开启一个按钮，允许用户无需先选中即可将内容复制到剪贴板。
     # https://zensical.org/docs/authoring/code-blocks/#code-copy-button
     "content.code.copy",
 
-    # Code blocks can include a button to allow for the selection of line
-    # ranges by the user.
+    # 代码块可以包含一个按钮，允许用户选择行范围。
     # https://zensical.org/docs/authoring/code-blocks/#code-selection-button
     "content.code.select",
 
-    # Zensical can render footnotes as inline tooltips, so the user can read
-    # the footnote without leaving the context of the document.
+    # Zensical 可以将脚注渲染为内联提示工具，因此用户无需离开当前文档上下文即可阅读脚注。
     # https://zensical.org/docs/authoring/footnotes/#footnote-tooltips
     "content.footnote.tooltips",
 
-    # If you have many content tabs that have the same titles (e.g., "Python",
-    # "JavaScript", "Cobol"), this feature causes all of them to switch to
-    # at the same time when the user chooses their language in one.
+    # 如果您有许多具有相同标题的内容选项卡（例如 "Python", "JavaScript", "Cobol"），
+    # 此功能会在用户选择其中一种语言时，使所有选项卡同时切换。
     # https://zensical.org/docs/authoring/content-tabs/#linked-content-tabs
     "content.tabs.link",
 
-    # TODO: not sure I understand this one? Is there a demo of this in the docs?
+    # TODO: 尚不确定此功能的具体含义？文档中是否有演示？
     # https://zensical.org/docs/authoring/tooltips/#improved-tooltips
     "content.tooltips",
 
-    # With this feature enabled, Zensical will automatically hide parts
-    # of the header when the user scrolls past a certain point.
+    # 启用此功能后，当用户滚动过某一点时，Zensical 将自动隐藏部分页眉。
     # https://zensical.org/docs/setup/header/#automatic-hiding
     # "header.autohide",
 
-    # Turn on this feature to expand all collapsible sections in the
-    # navigation sidebar by default.
+    # 开启此功能默认展开导航侧边栏中的所有可折叠部分。
     # https://zensical.org/docs/setup/navigation/#navigation-expansion
     # "navigation.expand",
 
-    # This feature turns on navigation elements in the footer that allow the
-    # user to navigate to a next or previous page.
+    # 此功能在页脚开启导航元素，允许用户导航到上一页或下一页。
     # https://zensical.org/docs/setup/footer/#navigation
     "navigation.footer",
 
-    # When section index pages are enabled, documents can be directly attached
-    # to sections, which is particularly useful for providing overview pages.
+    # 启用章节索引页面后，文档可以直接附加到章节上，这对于提供概览页面特别有用。
     # https://zensical.org/docs/setup/navigation/#section-index-pages
     "navigation.indexes",
 
-    # When instant navigation is enabled, clicks on all internal links will be
-    # intercepted and dispatched via XHR without fully reloading the page.
+    # 启用瞬间加载 (Instant Navigation) 后，所有内部链接的点击都将被拦截，
+    # 并通过 XHR 分发，而无需完全重新加载页面。
     # https://zensical.org/docs/setup/navigation/#instant-navigation
     "navigation.instant",
 
-    # With instant prefetching, your site will start to fetch a page once the
-    # user hovers over a link. This will reduce the perceived loading time
-    # for the user.
+    # 使用瞬间预加载 (Instant Prefetching)，一旦用户悬停在链接上，您的站点就会开始获取页面。
+    # 这将减少用户感知的加载时间。
     # https://zensical.org/docs/setup/navigation/#instant-prefetching
     "navigation.instant.prefetch",
 
-    # In order to provide a better user experience on slow connections when
-    # using instant navigation, a progress indicator can be enabled.
+    # 为了在使用瞬间加载时为慢速连接提供更好的用户体验，可以启用进度指示器。
     # https://zensical.org/docs/setup/navigation/#progress-indicator
     #"navigation.instant.progress",
 
-    # When navigation paths are activated, a breadcrumb navigation is rendered
-    # above the title of each page
+    # 激活导航路径后，面包屑导航将渲染在每个页面的标题上方。
     # https://zensical.org/docs/setup/navigation/#navigation-path
     # "navigation.path",
 
-    # When pruning is enabled, only the visible navigation items are included
-    # in the rendered HTML, reducing the size of the built site by 33% or more.
+    # 启用修剪 (Pruning) 后，渲染的 HTML 中仅包含可见的导航项，
+    # 将构建站点的体积减少 33% 或更多。
     # https://zensical.org/docs/setup/navigation/#navigation-pruning
     #"navigation.prune",
 
-    # When sections are enabled, top-level sections are rendered as groups in
-    # the sidebar for viewports above 1220px, but remain as-is on mobile.
+    # 启用章节 (Sections) 后，顶级章节在视口大于 1220px 时将在侧边栏渲染为分组，
+    # 但在移动设备上保持不变。
     # https://zensical.org/docs/setup/navigation/#navigation-sections
     "navigation.sections",
 
-    # When tabs are enabled, top-level sections are rendered in a menu layer
-    # below the header for viewports above 1220px, but remain as-is on mobile.
+    # 启用选项卡 (Tabs) 后，顶级章节在视口大于 1220px 时将在页眉下方的菜单层渲染，
+    # 但在移动设备上保持不变。
     # https://zensical.org/docs/setup/navigation/#navigation-tabs
     "navigation.tabs",
 
-    # When sticky tabs are enabled, navigation tabs will lock below the header
-    # and always remain visible when scrolling down.
+    # 启用粘性选项卡 (Sticky Tabs) 后，导航选项卡将锁定在页眉下方，并在向下滚动时始终保持可见。
     # https://zensical.org/docs/setup/navigation/#sticky-navigation-tabs
     "navigation.tabs.sticky",
 
-    # A back-to-top button can be shown when the user, after scrolling down,
-    # starts to scroll up again.
+    # 当用户向下滚动后开始向上滚动时，可以显示一个“回到顶部”按钮。
     # https://zensical.org/docs/setup/navigation/#back-to-top-button
     "navigation.top",
 
-    # When anchor tracking is enabled, the URL in the address bar is
-    # automatically updated with the active anchor as highlighted in the table
-    # of contents.
+    # 启用锚点追踪 (Anchor Tracking) 后，地址栏中的 URL 会随着目录中高亮的活动锚点自动更新。
     # https://zensical.org/docs/setup/navigation/#anchor-tracking
     "navigation.tracking",
 
-    # When search highlighting is enabled and a user clicks on a search result,
-    # Zensical will highlight all occurrences after following the link.
+    # 启用搜索高亮后，当用户点击搜索结果时，Zensical 将在跳转链接后高亮所有出现的关键词。
     # https://zensical.org/docs/setup/search/#search-highlighting
     "search.highlight",
 
-    # When anchor following for the table of contents is enabled, the sidebar
-    # is automatically scrolled so that the active anchor is always visible.
+    # 启用目录锚点跟随 (Anchor Following) 后，侧边栏会自动滚动，以便活动锚点始终可见。
     # https://zensical.org/docs/setup/navigation/#anchor-following
     # "toc.follow",
 
-    # When navigation integration for the table of contents is enabled, it is
-    # always rendered as part of the navigation sidebar on the left.
+    # 启用目录导航集成 (Navigation Integration) 后，目录将始终作为左侧导航侧边栏的一部分渲染。
     # https://zensical.org/docs/setup/navigation/#navigation-integration
-    "toc.integrate",
+    #"toc.integrate",
 ]
 
 # ----------------------------------------------------------------------------
-# In the "palette" subsection you can configure options for the color scheme.
-# You can configure different color # schemes, e.g., to turn on dark mode,
-# that the user can switch between. Each color scheme can be further
-# customized.
+# 在 "palette" 子部分中，您可以配置配色方案选项。
+# 您可以配置不同的配色方案（例如开启暗黑模式），供用户切换。
+# 每个配色方案都可以进一步自定义。
 #
-# Read more:
+# 了解更多:
 # - https://zensical.org/docs/setup/colors/
 # ----------------------------------------------------------------------------
 [[project.theme.palette]]
@@ -218,27 +197,24 @@ toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"
 
 # ----------------------------------------------------------------------------
-# In the "font" subsection you can configure the fonts used. By default, fonts
-# are loaded from Google Fonts, giving you a wide range of choices from a set
-# of suitably licensed fonts. There are options for a normal text font and for
-# a monospaced font used in code blocks.
+# 在 "font" 子部分中，您可以配置使用的字体。默认情况下，字体从 Google Fonts 加载，
+# 为您提供了一系列许可合适的字体选择。
+# 这里有普通文本字体和用于代码块的等宽字体选项。
 # ----------------------------------------------------------------------------
 [project.theme.font]
 text = "Inter"
 code = "Jetbrains Mono"
 
 # ----------------------------------------------------------------------------
-# You can configure your own logo to be shown in the header using the "logo"
-# option in the "icons" subsection. The logo can be a path to a file in your
-# "docs_dir" or it can be a path to an icon.
+# 您可以在 "icons" 子部分使用 "logo" 选项配置页眉中显示的自定义 Logo。
+# Logo 可以是 "docs_dir" 中文件的路径，也可以是图标的路径。
 #
-# Likewise, you can customize the logo used for the repository section of the
-# header. Zensical derives the default logo for this from the repository URL.
-# See below...
+# 同样，您可以自定义页眉仓库部分使用的 Logo。
+# Zensical 默认会从仓库 URL 推导 Logo。详见下文...
 #
-# There are other icons you can customize. See the documentation for details.
+# 还有其他图标可以自定义。详见文档。
 #
-# Read more:
+# 了解更多:
 # - https://zensical.org/docs/setup/logo-and-icons
 # - https://zensical.org/docs/authoring/icons-emojis/#search
 # ----------------------------------------------------------------------------
@@ -247,7 +223,7 @@ code = "Jetbrains Mono"
 #repo = "lucide/smile"
 
 # ----------------------------------------------------------------------------
-# The "extra" section contains miscellaneous settings.
+# "extra" 部分包含杂项设置。
 # ----------------------------------------------------------------------------
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
@@ -258,7 +234,7 @@ icon = "fontawesome/solid/envelope"
 link = "mailto:pearworld1235@gmail.com" 
 name = "Email Me"
 # ==========================================
-# Markdown 扩展配置 (Based on Official Docs)
+# Markdown 扩展配置 (基于官方文档)
 # ==========================================
 [project.markdown_extensions]
 # 开启 HTML 属性支持 (必须)
