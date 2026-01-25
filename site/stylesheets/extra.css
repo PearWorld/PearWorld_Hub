@@ -44,7 +44,7 @@
 
     /* 🔥【位置调整】顶部距离 🔥 */
     /* 之前文字被挡住是因为这里不够大。如果觉得高了，可以把 220 改成 180 */
-    padding-top: 120px; 
+    padding-top: 80px; 
     padding-bottom: 100px;
     
     /* 容器最大宽度，防止在大屏幕上内容分太开 */
@@ -206,7 +206,7 @@
         height: auto;
         
         /* 手机上不需要那么多留白 */
-        padding-top: 100px; 
+        padding-top: 60px; 
         padding-bottom: 40px;
         
         gap: 30px;
