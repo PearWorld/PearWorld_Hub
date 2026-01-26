@@ -1,26 +1,26 @@
 window.MathJax = {
   tex: {
-    // 1. 【重点】直接在这里把 $ 和 $$ 配好，不要在下面"打补丁"
-    // 这样即使下面运行慢了，MathJax 也能自己识别到公式
     inlineMath: [["\\(", "\\)"], ["$", "$"]], 
     displayMath: [["\\[", "\\]"], ["$$", "$$"]],
     processEscapes: true,
     processEnvironments: true
   },
   options: {
-    ignoreHtmlClass: ".*|",
+    // 允许 MathJax 扫描所有文本，不再“装瞎”
+    ignoreHtmlClass: ".*",
     processHtmlClass: "arithmatex"
   }
 };
 
-/* ==========================================================================
-   关键修复：适配 Instant Navigation (瞬间加载)
-   ========================================================================== */
+/* 适配瞬间加载并修复 insertRule 报错 */
 document$.subscribe(() => { 
-  // 2. 【安全锁】只有当 MathJax 真的加载好了，才去命令它干活
-  // 第一次打开网页时，如果它还没到，它自己到货后会自动渲染，不用我们催
-  // 点击链接跳转时，它肯定在，我们就调用它重新渲染
-  if (window.MathJax && window.MathJax.typesetPromise) {
-    MathJax.typesetPromise()
+  if (typeof MathJax !== 'undefined' && MathJax.typesetPromise) {
+    // 核心修复：强制清除 MathJax 内部对旧样式表的引用
+    // 这会防止它报错说找不到 insertRule
+    MathJax.startup.output.clearCache();
+    MathJax.typesetClear();
+    
+    // 重新渲染新页面的公式
+    MathJax.typesetPromise();
   }
 })

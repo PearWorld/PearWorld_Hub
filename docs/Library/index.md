@@ -9,7 +9,7 @@ hide:
 
 <div class="grid cards" markdown>
 
--   **[机械原理](机械原理.md)**
+-   **[机械原理](mechanical principle/common blanks.md)**
 
     ---
 
