@@ -293,3 +293,15 @@
         opacity: 0.9; /* 稍微透明一点，防止挡字 */
     }
 }
+/* 针对手机和横屏平板的优化 */
+@media screen and (max-width: 76.1875em) {
+  /* 增加侧边栏顶部标题的间距，防止被顶部菜单挡住 */
+  .md-nav__title {
+    padding-top: 2.5rem !important;
+  }
+
+  /* 如果你的 Logo 区域依然重叠，可以调整这个容器 */
+  .md-nav__header {
+    margin-top: 1rem;
+  }
+}
