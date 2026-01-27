@@ -23,8 +23,12 @@ nav = [
             {"电工上期中试题"="Library/electric study/up middle.md"},
             {"电工下试题B"="Library/electric study/down end.md"}
         ] },
-        { "🔢高数上" = "Library/高数上.md" },
-        { "📚高数下" = "Library/高数下.md" },
+        { "🔢高等数学" = [
+            {"高数上公式总结"="Library/higher mathematics/last formula.md"},
+            {"高数上典型例题"="Library/higher mathematics/last examples.md"},
+            {"高数下公式总结"="Library/higher mathematics/next formula.md"},
+            {"高数下典型例题"="Library/higher mathematics/next examples.md"}
+        ] },
         { "🎟️概率论与数理统计" = "Library/概率论.md" },
         { "🗒️线性代数" = "Library/线代.md" }
     ]},
