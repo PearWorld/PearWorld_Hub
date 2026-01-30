@@ -10,7 +10,8 @@ nav = [
     { "🛠️ Workbench" = [
         { "概览" = "Workbench/index.md" },
         { "Ⓜ️bmi088" = "Workbench/bmi088.md" },
-        { "🚗24电赛H题" = "Workbench/24h.md" }
+        { "🚗24电赛H题" = "Workbench/24h.md" },
+        { "💻Matplotlib 入门指南" = "Workbench/Matplotlib 入门指南.md" },
     ]},
     { "📚 Library" = [
         { "概览" = "Library/index.md" },

@@ -12,13 +12,13 @@
         <meta name="author" content="<pearworld>">
       
       
-        <link rel="canonical" href="https://www.pearworld.online/Workbench/bmi088/">
+        <link rel="canonical" href="https://www.pearworld.online/Workbench/Matplotlib%20%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../24h/">
       
       
-        <link rel="next" href="../24h/">
+        <link rel="next" href="../../Library/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>本项目基于BestRyze开源项目修改 参考项目mithi - PearWorld_Hub</title>
+        <title>Python Matplotlib 入门指南 - PearWorld_Hub</title>
       
     
     
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bestryze-mithi" class="md-skip">
+        <a href="#python-matplotlib" class="md-skip">
           Skip to content
         </a>
       
@@ -151,7 +151,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              本项目基于BestRyze开源项目修改 参考项目mithi
+              Python Matplotlib 入门指南
             
           </span>
         </div>
@@ -470,37 +470,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ⓜ️bmi088
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../bmi088/" class="md-nav__link">
         
   
   
@@ -516,176 +489,6 @@
   
 
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1bmi088mpu6050" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.使用bmi088并可回滚为mpu6050
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.接口映射关系
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#36050" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.保持部分6050原始定义（便于代码回滚）
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.数据流向图
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.硬件修改
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5.硬件修改">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1spi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        （1）开启spi接口
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        （2）修改传感器数据带宽
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        （3）修改波特率
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.工作流程
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.主循环工作流程（未作修改）
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7bmi088" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7.bmi088
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8.算法流程
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        9.总结
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -723,10 +526,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Matplotlib%20%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💻Matplotlib 入门指南
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -742,6 +572,155 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-matplotlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Matplotlib 简介与核心概念
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 环境准备
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 标准绘图流程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 标准绘图流程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例代码：绘制基础折线图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-subplots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 多子图绘制 (Subplots)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 多子图绘制 (Subplots)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2x2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例代码：2x2 子图布局
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 高级定制与严谨性建议
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 高级定制与严谨性建议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 支持中文显示
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-twin-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 双坐标轴 (Twin Axis)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1432,10 +1411,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1bmi088mpu6050" class="md-nav__link">
+  <a href="#1-matplotlib" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.使用bmi088并可回滚为mpu6050
+        1. Matplotlib 简介与核心概念
       
     </span>
   </a>
@@ -1446,7 +1425,7 @@
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.接口映射关系
+        2. 环境准备
       
     </span>
   </a>
@@ -1454,24 +1433,58 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#36050" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.保持部分6050原始定义（便于代码回滚）
+        3. 标准绘图流程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 标准绘图流程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例代码：绘制基础折线图
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+  <a href="#4-subplots" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.数据流向图
+        4. 多子图绘制 (Subplots)
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="4. 多子图绘制 (Subplots)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2x2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例代码：2x2 子图布局
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1479,19 +1492,19 @@
   <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.硬件修改
+        5. 高级定制与严谨性建议
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5.硬件修改">
+    <nav class="md-nav" aria-label="5. 高级定制与严谨性建议">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1spi" class="md-nav__link">
+  <a href="#51" class="md-nav__link">
     <span class="md-ellipsis">
       
-        （1）开启spi接口
+        5.1 支持中文显示
       
     </span>
   </a>
@@ -1499,21 +1512,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
+  <a href="#52-twin-axis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        （2）修改传感器数据带宽
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        （3）修改波特率
+        5.2 双坐标轴 (Twin Axis)
       
     </span>
   </a>
@@ -1529,51 +1531,7 @@
   <a href="#6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.工作流程
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.主循环工作流程（未作修改）
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7bmi088" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7.bmi088
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8.算法流程
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        9.总结
+        6. 总结
       
     </span>
   </a>
@@ -1598,173 +1556,146 @@
   
 
 
-<h1 id="bestryze-mithi">本项目基于<a href="../[BestRyze/Hexapod](https://github.com/BestRyze/Hexapod)">BestRyze</a>开源项目修改 参考项目<a href="https://github.com/mithi/hexapod/tree/master">mithi</a></h1>
-<h2 id="1bmi088mpu6050">1.使用bmi088并可回滚为mpu6050</h2>
-<p>项目中可能有多个地方使用了 mpu6050 对象，例如：</p>
+<h1 id="python-matplotlib">Python Matplotlib 入门指南</h1>
+<h2 id="1-matplotlib">1. Matplotlib 简介与核心概念</h2>
+<p>Matplotlib 是 Python 生态中最基础且功能强大的 2D 绘图库。为了严谨地使用它，我们需要首先理解其核心架构中的两个关键概念：</p>
 <ul>
-<li>
-<p>mpu6050.Init()</p>
-</li>
-<li>
-<p>mpu6050.get_angle()</p>
-</li>
-<li>
-<p>mpu6050.dmp_get_data()</p>
-</li>
+<li><strong>Figure (画布)</strong>: 整个图形的容器，可以理解为一张白纸。它包含了所有的子图、标题、图例等元素。</li>
+<li><strong>Axes (坐标系/子图)</strong>: 实际绘图的区域。一个 Figure 可以包含一个或多个 Axes。大多数绘图操作（如画线、设置标题、设置坐标轴）都是在 Axes 对象上进行的。</li>
 </ul>
-<p>如果直接删除这些文件，需要：</p>
-<ul>
-<li>
-<p>搜索所有使用 mpu6050 的代码</p>
-</li>
-<li>
-<p>逐一替换为 BMI088 的接口</p>
-</li>
-<li>
-<p>可能引入错误</p>
-</li>
-</ul>
-<p>保留适配层后，这些调用无需修改，适配层内部会转发到 BMI088。</p>
-<h2 id="2">2.接口映射关系</h2>
-<div class="highlight"><pre><span></span><code>旧接口（MPU6050） →    新实现（BMI088）
-─────────────────────────────────────────────
-mpu6050.Init()       →    空实现（BMI088在MPU_task中初始化）
-mpu6050.get_angle()  →    从INS结构体获取角度（度转弧度）
-mpu6050.dmp_get_data() →  从INS结构体更新角度数据
+<blockquote>
+<p><strong>注意</strong>：初学者常混淆 <code>plt.plot()</code>（状态机模式）和 <code>ax.plot()</code>（面向对象模式）。本教程将严格使用 <strong>面向对象模式</strong>，因为它在处理复杂图表时逻辑更清晰，控制力更强。</p>
+</blockquote>
+<h2 id="2">2. 环境准备</h2>
+<p>确保已安装 <code>matplotlib</code> 和 <code>numpy</code>（用于生成数据）。</p>
+<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span> <span class="n">numpy</span>
 </code></pre></div>
-<h2 id="36050">3.保持部分6050原始定义（便于代码回滚）</h2>
-<p>在 mpu6050.h 中保留了 MPU6050 的寄存器定义（如 MPU6050_RA_WHO_AM_I 等），原因：</p>
-<ul>
-<li>
-<p>可能有其他代码引用了这些宏</p>
-</li>
-<li>
-<p>保留它们不会影响功能</p>
-</li>
-</ul>
-<h2 id="4">4.数据流向图</h2>
-<div class="highlight"><pre><span></span><code>┌─────────────────┐
-│  MPU_Task任务   │  ← FreeRTOS任务，初始化BMI088
-│  (MPU_task.cpp) │
-└────────┬────────┘
-         │ 更新INS结构体
-         ↓
-┌─────────────────┐
-│  INS_t INS      │  ← BMI088的角度数据（度）
-│  (全局变量)     │
-└────────┬────────┘
-         │ get_imu_control_point()
-         ↓
-┌─────────────────┐
-│ mpu6050.get_    │  ← 适配层：度转弧度
-│ angle()         │
-└────────┬────────┘
-         │ 返回Position3（弧度）
-         ↓
-┌─────────────────┐
-│  原有业务代码   │  ← 完全不需要修改
-└─────────────────┘
+<p>在代码中引入标准缩写：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </code></pre></div>
-<h2 id="5">5.硬件修改</h2>
-<h3 id="1spi">（1）开启spi接口</h3>
-<ul>
-<li>选择 <strong>Full-Duplex Master</strong>（全双工主机模式）。</li>
-</ul>
-<p>​      <strong>CS_GYRO (陀螺仪片选)</strong> 连接的是：<strong>PA3</strong></p>
-<p>​      <strong>CS_ACCEL (加速度计片选)</strong> 连接的是：<strong>PA4</strong></p>
-<p>​      <strong>PA5</strong> -&gt; SPI1_SCK </p>
-<p>​      <strong>PA6</strong> -&gt; SPI1_MISO </p>
-<p>​      <strong>PA7</strong> -&gt; SPI1_MOSI </p>
-<h3 id="2_1">（2）修改传感器数据带宽</h3>
-<ul>
-<li>BMI088 传感器必须用 8 位数据通信，选 4 位读出来全是乱码。</li>
-</ul>
-<h3 id="3">（3）修改波特率</h3>
-<ul>
-<li>选择一个分频系数，观察下方的 <code>Baud Rate</code>（波特率），让它在 <strong>2.0 MBits/s 到 5.0 MBits/s</strong> 之间最好。太高（超过 10M）可能会不稳定，太低会影响读取速度。这是因为 STM32H750 的主频非常高（通常 400MHz 或 480MHz），如果不修改分频系数（Prescaler），默认生成的 SPI 波特率往往高达 <strong>25 MBits/s 甚至 50 MBits/s</strong>，这远远超过了 BMI088 传感器的承受极限。</li>
-</ul>
-<h2 id="6">6.工作流程</h2>
-<div class="highlight"><pre><span></span><code>遥控器输入
-    ↓
-解析控制指令（速度、模式切换）
-    ↓
-步态规划模块
-    ├─ 计算6条腿的轨迹点（N_POINTS=100个点）
-    ├─ 根据速度指令生成步态
-    └─ 计算每条腿的关节角度
-    ↓
-逆运动学解算
-    ├─ 末端位置 → 关节角度
-    └─ 考虑腿的偏移角度
-    ↓
-舵机控制（UART通信）
-    ├─ 6条腿 × 3关节 = 18个舵机
-    └─ 机械臂3个关节 + 1个夹爪
-    ↓
-机器人执行动作
-    ↓
-IMU反馈（可选）
-    ├─ 读取姿态角度
-    └─ PID控制保持稳定
-</code></pre></div>
-<h2 id="6_1">6.主循环工作流程（未作修改）</h2>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">MX_FREERTOS_Init</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">osThreadDef</span><span class="p">(</span><span class="n">defaultTask</span><span class="p">,</span><span class="w"> </span><span class="n">StartDefaultTask</span><span class="p">,</span><span class="w"> </span><span class="n">osPriorityNormal</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">);</span><span class="c1">//协调</span>
-<span class="w">  </span><span class="n">defaultTaskHandle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">osThreadCreate</span><span class="p">(</span><span class="n">osThread</span><span class="p">(</span><span class="n">defaultTask</span><span class="p">),</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<h2 id="3">3. 标准绘图流程</h2>
+<p>一个严谨的绘图脚本通常遵循以下五个步骤：</p>
+<ol>
+<li><strong>准备数据</strong> (Prepare Data)</li>
+<li><strong>创建画布与坐标系</strong> (Setup Plot)</li>
+<li><strong>绘制图形</strong> (Plot)</li>
+<li><strong>定制样式</strong> (Customize)</li>
+<li><strong>保存或显示</strong> (Save/Show)</li>
+</ol>
+<h3 id="_1">示例代码：绘制基础折线图</h3>
+<p>下面的代码展示了如何绘制一个包含正弦和余弦波形的图表，并添加图例、网格和标题。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="w">  </span><span class="n">osThreadDef</span><span class="p">(</span><span class="n">LED_task</span><span class="p">,</span><span class="w"> </span><span class="n">LED_Task</span><span class="p">,</span><span class="w"> </span><span class="n">osPriorityIdle</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">);</span>
-<span class="w">  </span><span class="n">LED_taskHandle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">osThreadCreate</span><span class="p">(</span><span class="n">osThread</span><span class="p">(</span><span class="n">LED_task</span><span class="p">),</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="c1">//闲置</span>
+<span class="c1"># 1. 准备数据</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># 在 0 到 10 之间生成 100 个点</span>
+<span class="n">y_sin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">y_cos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-<span class="w">  </span><span class="n">osThreadDef</span><span class="p">(</span><span class="n">LegControl_task</span><span class="p">,</span><span class="w"> </span><span class="n">LegControl_Task</span><span class="p">,</span><span class="w"> </span><span class="n">osPriorityRealtime</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1024</span><span class="p">);</span><span class="c1">//核心控制最高级堆栈极大</span>
-<span class="w">  </span><span class="n">LegControl_taskHandle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">osThreadCreate</span><span class="p">(</span><span class="n">osThread</span><span class="p">(</span><span class="n">LegControl_task</span><span class="p">),</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<span class="c1"># 2. 创建画布 (Figure) 和 坐标系 (Axes)</span>
+<span class="c1"># figsize 定义画布大小 (宽, 高)，单位为英寸</span>
+<span class="c1"># dpi 定义分辨率 (dots per inch)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 
-<span class="w">  </span><span class="n">osThreadDef</span><span class="p">(</span><span class="n">MPU_task</span><span class="p">,</span><span class="w"> </span><span class="n">MPU_Task</span><span class="p">,</span><span class="w"> </span><span class="n">osPriorityRealtime</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">512</span><span class="p">);</span><span class="c1">//核心控制最高级</span>
-<span class="w">  </span><span class="n">MPU_taskHandle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">osThreadCreate</span><span class="p">(</span><span class="n">osThread</span><span class="p">(</span><span class="n">MPU_task</span><span class="p">),</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<span class="c1"># 3. 绘制图形</span>
+<span class="c1"># label 参数用于后续生成图例</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_sin</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Sin(x)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_cos</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Cos(x)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
 
-<span class="p">}</span>
+<span class="c1"># 4. 定制样式</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Trigonometric Functions Example&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>  <span class="c1"># 设置标题</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>                        <span class="c1"># 设置 X 轴标签</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Amplitude&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>                       <span class="c1"># 设置 Y 轴标签</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>                                            <span class="c1"># 设置 X 轴范围</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>                                        <span class="c1"># 设置 Y 轴范围</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>                       <span class="c1"># 添加网格 (虚线, 透明度 0.6)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">,</span> <span class="n">frameon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>                    <span class="c1"># 显示图例</span>
+
+<span class="c1"># 5. 显示或保存</span>
+<span class="c1"># plt.savefig(&#39;my_plot.png&#39;, dpi=300)  # 保存为高分辨率图片</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                             <span class="c1"># 在窗口显示</span>
 </code></pre></div>
-<h2 id="7bmi088">7.bmi088</h2>
-<div class="highlight"><pre><span></span><code>bmi088/
-├── IMU/                    # IMU核心功能模块
-│   ├── BMI088driver.*      # BMI088传感器底层驱动
-│   ├── BMI088Middleware.*   # SPI通信中间层
-│   ├── BMI088reg.h         # BMI088寄存器定义
-│   ├── QuaternionEKF.*     # 四元数扩展卡尔曼滤波（姿态解算核心）
-│   ├── kalman_filter.*     # 卡尔曼滤波器基础实现
-│   ├── pid.*               # PID控制器（用于温度控制等）
-│   ├── eeprom.*            # EEPROM存储（校准数据）
-│   ├── bsp_dwt.*           # 精确计时（微秒级）
-│   └── user_lib.*          # 用户库函数
-└── MPU_task.*              # FreeRTOS任务 + INS姿态解算
+<hr />
+<h2 id="4-subplots">4. 多子图绘制 (Subplots)</h2>
+<p>在数据分析中，我们经常需要对比多个图表。<code>plt.subplots()</code> 是管理多子图布局的最佳工具。</p>
+<h3 id="2x2">示例代码：2x2 子图布局</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># 数据准备</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+
+<span class="c1"># 创建 2 行 2 列的子图布局</span>
+<span class="c1"># ax 是一个包含 4 个 Axes 对象的 numpy 数组</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># 调整子图之间的间距，防止标签重叠</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># --- 绘制子图 1 (左上) ---</span>
+<span class="c1"># axes[0, 0] 访问第一行第一列</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;g-&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Quadratic&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y = x^2&#39;</span><span class="p">)</span>
+
+<span class="c1"># --- 绘制子图 2 (右上) ---</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;m--&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Cubic&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y = x^3&#39;</span><span class="p">)</span>
+
+<span class="c1"># --- 绘制子图 3 (左下) ---</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Scatter Plot&#39;</span><span class="p">)</span>
+
+<span class="c1"># --- 绘制子图 4 (右下) ---</span>
+<span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">18</span><span class="p">]</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">categories</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Bar Chart&#39;</span><span class="p">)</span>
+
+<span class="c1"># 统一设置所有子图的字体大小 (可选)</span>
+<span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">axes</span><span class="o">.</span><span class="n">flat</span><span class="p">:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">labelsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
-<h2 id="8">8.算法流程</h2>
-<div class="highlight"><pre><span></span><code>陀螺仪数据（角速度）
-    ↓
-四元数积分（预测）
-    ↓
-加速度计数据（重力方向）
-    ↓
-EKF更新（修正）
-    ↓
-输出：Roll, Pitch, Yaw（度）
+<hr />
+<h2 id="5">5. 高级定制与严谨性建议</h2>
+<h3 id="51">5.1 支持中文显示</h3>
+<p>Matplotlib 默认不支持中文，需要手动设置字体。</p>
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;SimHei&#39;</span><span class="p">]</span>  <span class="c1"># 用来正常显示中文标签</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.unicode_minus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>    <span class="c1"># 用来正常显示负号</span>
 </code></pre></div>
-<h2 id="9">9.总结</h2>
-<p>这是一个完整的六足机器人控制系统，包含：</p>
-<ul>
-<li>
-<p>六足行走（步态规划与控制）</p>
-</li>
-<li>
-<p>姿态感知（IMU传感器）</p>
-</li>
-<li>
-<p>遥控控制（多模式切换）</p>
-</li>
-<li>
-<p>实时控制（FreeRTOS多任务）</p>
-</li>
-</ul>
-<p>适用于需要复杂运动控制的六足机器人应用场景。</p>
+<h3 id="52-twin-axis">5.2 双坐标轴 (Twin Axis)</h3>
+<p>当两个变量量纲不同（例如：温度和降雨量）时，需要使用双 Y 轴。</p>
+<div class="highlight"><pre><span></span><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;tab:red&#39;</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X axis&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Exp Data&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelcolor</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+
+<span class="c1"># 实例化第二个坐标轴，共享同一个 X 轴</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>  
+
+<span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;tab:blue&#39;</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Log Data&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelcolor</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>  <span class="c1"># 自动调整布局</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h2 id="6">6. 总结</h2>
+<p>要熟练且严谨地使用 Matplotlib，请遵循以下原则：</p>
+<ol>
+<li><strong>始终使用 <code>fig, ax = plt.subplots()</code></strong>：这能让你明确地区分“画布”和“绘图区”，在处理多子图时不会混乱。</li>
+<li><strong>数据与绘图分离</strong>：先处理好 Numpy/Pandas 数据，再传入绘图函数，不要在绘图代码中进行复杂的数据清洗。</li>
+<li><strong>显式设置参数</strong>：尽量显式地设置颜色 (<code>color</code>)、线型 (<code>linestyle</code>) 和 标签 (<code>label</code>)，这会提高代码的可读性和可维护性。</li>
+</ol>
 
 
 
@@ -1804,7 +1735,7 @@ EKF更新（修正）
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: 概览">
+          <a href="../24h/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 🚗24电赛H题">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
@@ -1814,20 +1745,20 @@ EKF更新（修正）
                 Previous
               </span>
               <div class="md-ellipsis">
-                概览
+                🚗24电赛H题
               </div>
             </div>
           </a>
         
         
           
-          <a href="../24h/" class="md-footer__link md-footer__link--next" aria-label="Next: 🚗24电赛H题">
+          <a href="../../Library/" class="md-footer__link md-footer__link--next" aria-label="Next: 概览">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                🚗24电赛H题
+                概览
               </div>
             </div>
             <div class="md-footer__button md-icon">
