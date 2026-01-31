@@ -12,6 +12,7 @@ nav = [
         { "Ⓜ️bmi088" = "Workbench/bmi088.md" },
         { "🚗24电赛H题" = "Workbench/24h.md" },
         { "💻Matplotlib 入门指南" = "Workbench/Matplotlib 入门指南.md" },
+        { "🔠LaTeX 入门指南" = "Workbench/LaTeX 入门指南.md" }
     ]},
     { "📚 Library" = [
         { "概览" = "Library/index.md" },
