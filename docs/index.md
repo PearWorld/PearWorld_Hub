@@ -17,7 +17,7 @@ hide:
         <p class="hero-description">
             一名<strong>机械电子工程</strong>专业的本科生，正在不断进步。
             <br>
-            这里不仅有 <strong>嵌入式</strong> 与 <strong>机器人</strong>的底层控制实录，更汇集了考研备考期间沉淀的核心考点。
+            这里不仅有 <strong>嵌入式</strong> 与 <strong>机器人</strong>的底层控制实录，更汇集了考研备考期间积累的核心考点。
         </p>
     
         <div class="social-actions">
@@ -49,25 +49,25 @@ hide:
     ---
     > **Status: Building**
     
-    机械电子实战 / STM32 / 六足机器人开发
+    机械电子实战 / 六足机器人开发 / C++学习笔记
 
 -   **[:material-brain: 阅览室 | Library](Library.md)**
     ---
     > **Status: Loading...**
     
-    考研专业课 / 算法笔记
+    考研专业课 / 机电专业课程
 
 -   **[:material-heart-pulse: 运动 | Sports](Sports.md)**
     ---
     > **VO2 Max: Improving**
     
-    中长跑 / 间歇跑 / 身体机能数据监控
+    中长跑 / 骑行路线 / 身体机能数据监控
 
 -   **[:material-map-marker-radius: 山野 | Outdoors](Outdoors.md)**
     ---
     > **Loc: Suzhou**
     
-    徒步记录 / 城市探索
+    徒步记录 / 城市探索 / 美食地图
 
 </div>
 
