@@ -25,7 +25,7 @@ hide:
 
     2024年电子设计竞赛 H 题（自动行驶小车）完整技术方案，包含控制策略与硬件选型。
 
--   **[:material-robot: LaTeX入门](LaTeX入门指南.md)**
+-   **[:material-robot: LaTeX入门](LaTeX 入门指南.md)**
 
     ---
 
@@ -33,7 +33,7 @@ hide:
 
     论文写作语法，LaTeX入门教程
 
--   **[:material-code-braces: Python画图库教学](Matplotlib入门指南.md)**
+-   **[:material-code-braces: Python画图库教学](Matplotlib 入门指南.md)**
 
     ---
     > **状态: 已完结**
