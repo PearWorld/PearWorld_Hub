@@ -36,6 +36,7 @@ nav = [
     ]},
     { "🏃 Sports" = "Sports/index.md" },
     { "🌲 Outdoors" = "Outdoors/index.md" },
+    { "🧏‍♂️ Ramblings" = "Ramblings/index.md" },
 ]
 extra_css = ["stylesheets/extra.css"]
 extra_javascript = [

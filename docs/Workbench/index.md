@@ -25,19 +25,19 @@ hide:
 
     2024年电子设计竞赛 H 题（自动行驶小车）完整技术方案，包含控制策略与硬件选型。
 
--   **[:material-robot: 六足机器人](hexapod.md)**
+-   **[:material-robot: LaTeX入门](LaTeX入门指南.md)**
 
     ---
 
-    > **状态: 进行中**
+    > **状态: 已完结**
 
-    我的毕业设计项目：基于arm的六足机器人硬件与步态算法实现。
+    论文写作语法，LaTeX入门教程
 
--   **[:material-code-braces: 蓝桥杯备赛](LanQiao.md)**
+-   **[:material-code-braces: Python画图库教学](Matplotlib入门指南.md)**
 
     ---
-    > **状态: 进行中**
+    > **状态: 已完结**
 
-
+    Matplotlib绘图相关
 
 </div>

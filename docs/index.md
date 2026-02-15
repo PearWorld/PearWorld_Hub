@@ -46,28 +46,34 @@ hide:
 <div class="grid cards" markdown>
 
 -   **[:material-robot-industrial: 工作台 | Workbench](Workbench.md)**
-    ---
+    
     > **Status: Building**
     
     机械电子实战 / 六足机器人开发 / C++学习笔记
 
 -   **[:material-brain: 阅览室 | Library](Library.md)**
-    ---
+    
     > **Status: Loading...**
     
     考研专业课 / 机电专业课程
 
 -   **[:material-heart-pulse: 运动 | Sports](Sports.md)**
-    ---
+    
     > **VO2 Max: Improving**
     
     中长跑 / 骑行路线 / 身体机能数据监控
 
 -   **[:material-map-marker-radius: 山野 | Outdoors](Outdoors.md)**
-    ---
+    
     > **Loc: Suzhou**
     
     徒步记录 / 城市探索 / 美食地图
+    
+-   **[:material-account-voice: 杂谈 | Ramblings ](Ramblings.md)**
+    
+    > **独立思考 开放包容**
+    
+    热点思考
 
 </div>
 
