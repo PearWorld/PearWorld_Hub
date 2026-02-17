@@ -1717,14 +1717,14 @@ mpu6050.dmp_get_data() →  从INS结构体更新角度数据
 </ul>
 <h2 id="4">4.数据流向图</h2>
 <div class="highlight"><pre><span></span><code>┌─────────────────┐
-│  MPU_Task任务   │  ← FreeRTOS任务，初始化BMI088
+│  MPU_Task任务    │  ← FreeRTOS任务，初始化BMI088
 │  (MPU_task.cpp) │
 └────────┬────────┘
          │ 更新INS结构体
          ↓
 ┌─────────────────┐
 │  INS_t INS      │  ← BMI088的角度数据（度）
-│  (全局变量)     │
+│  (全局变量)       │
 └────────┬────────┘
          │ get_imu_control_point()
          ↓
@@ -1735,7 +1735,7 @@ mpu6050.dmp_get_data() →  从INS结构体更新角度数据
          │ 返回Position3（弧度）
          ↓
 ┌─────────────────┐
-│  原有业务代码   │  ← 完全不需要修改
+│  原有业务代码     │  ← 完全不需要修改
 └─────────────────┘
 </code></pre></div>
 <h2 id="5">5.硬件修改</h2>
